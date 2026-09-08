@@ -1,0 +1,44 @@
+/* CSS Loader maps these readable Steam selectors to the current client classes. */
+
+/* Keep horizontal scrolling. Reserve space above the row for enlarged cards. */
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  .basicgamecarousel_BasicGameCarousel_3MdH5 {
+  box-sizing: content-box !important;
+  padding: 140px 0 16px !important;
+  margin-bottom: -156px !important;
+  translate: 0 -128px;
+}
+
+/* Retain Steam's horizontal inset without widening the scroll viewport. */
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  .basicgamecarousel_BasicGameCarousel_3MdH5
+  > .ReactVirtualized__Grid__innerScrollContainer {
+  margin-inline: 2.8vw;
+}
+
+/* Scale the card wrapper so the focus ring and attached title move with it. */
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN {
+  scale: none;
+  transform-origin: center bottom;
+  transition: scale 160ms ease-out;
+}
+
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:is(:hover, .gpfocuswithin) {
+  scale: var(--hcz-scale, 1.15);
+  z-index: 20;
+}
+
+/* Keep the wide first card inside the left edge of the screen. */
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN.basicgamecarousel_Featured_2eJEJ {
+  transform-origin: left bottom;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gamepadhomerecentgames_RecentGamesContainer_2_cRk
+    .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN {
+    transition: none;
+  }
+}
