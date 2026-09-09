@@ -2,25 +2,25 @@
 
 A [CSS Loader](https://docs.deckthemes.com/CSSLoader/) theme for SteamOS Gaming Mode. Enlarge a Home carousel cover when you hover over it with a pointer or select it with a controller.
 
-**Zoom size: 100%–130%, in 5% steps. Default: 115%.**
+**Two sliders set the size: Base zoom (%) from 100 to 200 in steps of 10, and Fine adjustment from +0 to +10 in steps of 1. The two values are added, which gives 100% to 210% total. Default: 110 + 5 = 115%.**
 
-The focus ring and attached title move with the cover. The Library grid is not changed. 
+The focus ring and attached title move with the cover. The Library grid is not changed, and the **View more in your Library** card at the end of the row keeps its normal size.
 
-## Screenshots at every size
+## Screenshots
 
 The screenshots use **Art Hero**, **Centered Game Text**, **Game Header Text Stroke**, **Darken Unfocused Games**, and **Round**, with other installed plugins supplying badges. Those appearance changes are not part of Home Carousel Zoom and are not required or bundled.
 
-Percentages apply to the selected card's existing appearance. **100% keeps Steam's normal focus effect**; it does not remove that effect.
+Percentages apply to the selected card's existing appearance. **100% keeps Steam's normal focus effect**; it does not remove that effect. These screenshots cover 100% to 130%; the sliders now reach 210%.
 
-| Zoom size | Added enlargement | Steam Deck screenshot |
+| Total zoom | Slider values | Steam Deck screenshot |
 | --- | --- | --- |
-| 100% | None | [![Home carousel at 100% zoom](assets/screenshots/zoom-100.webp)](assets/screenshots/zoom-100.webp) |
-| 105% | 5% | [![Home carousel at 105% zoom](assets/screenshots/zoom-105.webp)](assets/screenshots/zoom-105.webp) |
-| 110% | 10% | [![Home carousel at 110% zoom](assets/screenshots/zoom-110.webp)](assets/screenshots/zoom-110.webp) |
-| **115% — default** | **15%** | [![Home carousel at the default 115% zoom](assets/screenshots/zoom-115.webp)](assets/screenshots/zoom-115.webp) |
-| 120% | 20% | [![Home carousel at 120% zoom](assets/screenshots/zoom-120.webp)](assets/screenshots/zoom-120.webp) |
-| 125% | 25% | [![Home carousel at 125% zoom](assets/screenshots/zoom-125.webp)](assets/screenshots/zoom-125.webp) |
-| 130% | 30% | [![Home carousel at 130% zoom](assets/screenshots/zoom-130.webp)](assets/screenshots/zoom-130.webp) |
+| 100% | 100 + 0 | [![Home carousel at 100% zoom](assets/screenshots/zoom-100.webp)](assets/screenshots/zoom-100.webp) |
+| 105% | 100 + 5 | [![Home carousel at 105% zoom](assets/screenshots/zoom-105.webp)](assets/screenshots/zoom-105.webp) |
+| 110% | 110 + 0 | [![Home carousel at 110% zoom](assets/screenshots/zoom-110.webp)](assets/screenshots/zoom-110.webp) |
+| **115% — default** | **110 + 5** | [![Home carousel at the default 115% zoom](assets/screenshots/zoom-115.webp)](assets/screenshots/zoom-115.webp) |
+| 120% | 120 + 0 | [![Home carousel at 120% zoom](assets/screenshots/zoom-120.webp)](assets/screenshots/zoom-120.webp) |
+| 125% | 120 + 5 | [![Home carousel at 125% zoom](assets/screenshots/zoom-125.webp)](assets/screenshots/zoom-125.webp) |
+| 130% | 130 + 0 | [![Home carousel at 130% zoom](assets/screenshots/zoom-130.webp)](assets/screenshots/zoom-130.webp) |
 
 ## Install
 
@@ -40,11 +40,20 @@ Copy the complete [`Home Carousel Zoom`](Home%20Carousel%20Zoom) folder into `~/
 
 ## Adjust the size
 
-Open **… → Decky → CSS Loader → Home Carousel Zoom**, expand the theme's settings, and adjust **Zoom size**.
+Open **… → Decky → CSS Loader → Home Carousel Zoom** and expand the theme's settings. There are two sliders:
 
-- Use left/right controller input on the slider to decrease/increase the size.
+| Slider | Range | Step | Default |
+| --- | --- | --- | --- |
+| **Base zoom (%)** | 100 to 200 | 10 | 110 |
+| **Fine adjustment** | +0 to +10 | 1 | +5 |
+
+**Total zoom = Base zoom + Fine adjustment.** For example, `110 + 5` gives 115%, `130 + 7` gives 137%, and `200 + 10` gives 210%.
+
+- Use left/right controller input on each slider to decrease/increase its value.
+- Different combinations can give the same total. `100 + 10` and `110 + 0` both give 110%.
 - Pointer hover and controller focus both trigger zoom. A touchscreen has no persistent hover state.
-- Covers grow over adjacent cards rather than pushing them apart. Large values can cover more of a neighboring card or title, particularly with other carousel layouts.
+- Covers grow over adjacent cards rather than pushing them apart. Large values cover more of a neighboring card or title, and above approximately 150% the selected cover reaches the top of the screen and hides part of the status bar.
+- If you used the earlier single **Zoom size** slider, your saved value does not transfer. The theme starts at the 115% default, so set the two sliders again after the update.
 
 ## License and credits
 
