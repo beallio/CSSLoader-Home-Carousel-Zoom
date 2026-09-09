@@ -45,9 +45,9 @@
     },
     "Focus appearance": {
       "type": "dropdown",
-      "default": "Existing appearance",
+      "default": "Steam default",
       "values": {
-        "Existing appearance": {},
+        "Steam default": {},
         "Custom": {"focus.css": ["bigpicture"]}
       },
       "components": [
@@ -55,7 +55,7 @@
           "name": "Highlight color",
           "type": "color-picker",
           "on": "Custom",
-          "default": "#5ac8fa",
+          "default": "#ffffff99",
           "css_variable": "hcz-focus-color",
           "tabs": ["bigpicture"]
         }
@@ -95,7 +95,7 @@
     },
     "Halo strength (Custom only)": {
       "type": "dropdown",
-      "default": "Medium",
+      "default": "Off",
       "values": {
         "Off": {
           "--hcz-glow-blur": ["0px", "bigpicture"],

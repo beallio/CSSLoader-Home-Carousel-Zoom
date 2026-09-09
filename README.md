@@ -61,25 +61,47 @@ Open **… → Decky → CSS Loader → Home Carousel Zoom** and expand the them
 
 **Focus appearance** selects who controls the Home cover's outline:
 
-- **Existing appearance** (default) keeps Steam's and your other themes' outline.
-- **Custom** replaces the animated outline with a fixed-color outline and an optional halo. It does not remove the artwork-colored glow.
+- **Steam default** (default) leaves Steam's outline in place. Other enabled themes can still change its appearance; this option does not disable them.
+- **Custom** adds a fixed-color outline and an optional halo, and hides the cover's animated sheen. It does not remove the artwork-colored glow.
 
 The two glows are separate. **Artwork glow** is the broad, translucent effect that takes its colors from the cover art. **Halo strength** controls the added glow around the custom outline.
 
 | Setting | Works in | Options | Default |
 | --- | --- | --- | --- |
-| **Artwork glow (Both modes)** | Existing appearance and Custom | Normal / Off / Low / Medium / High | Normal |
-| **Highlight color** | Custom only | Open the color picker; adjust hue, saturation, lightness, and alpha, then select **Confirm** | Light blue (`#5ac8fa`) |
-| **Outline thickness (Custom only)** | Custom only | Thin / Medium / Thick | Medium |
-| **Halo strength (Custom only)** | Custom only | Off / Low / Medium / High | Medium |
+| **Artwork glow (Both modes)** | Steam default and Custom | Normal / Off / Low / Medium / High | Normal |
+| **Highlight color** | Custom only | Open the color picker; adjust hue, saturation, lightness, and alpha, then select **Confirm** | White at 60% alpha (`#ffffff99`) |
+| **Outline thickness (Custom only)** | Custom only | Thin / Medium / Thick | Medium (2 px) |
+| **Halo strength (Custom only)** | Custom only | Off / Low / Medium / High | Off |
 
 - **Artwork glow → Normal** leaves Steam's and your other themes' artwork effect unchanged. **Off** hides it. Low, Medium, and High set its opacity to 25%, 50%, and 100%; they do not change its colors.
 - **Halo strength → Off** removes only the custom halo. It keeps the custom outline and does not change Artwork glow.
 - Color-picker alpha controls the opacity of the custom outline and halo, not Artwork glow. Alpha zero makes the custom outline and halo invisible.
-- CSS Loader shows the color picker only in Custom mode. Its current theme format cannot hide or disable the separate outline and halo dropdowns in Existing mode. They are labeled **Custom only** and have no effect in Existing mode.
-- Switching back to **Existing appearance** restores the previous outline without discarding your custom settings. Artwork glow keeps its separate setting. CSS Loader saves all settings across refreshes.
+- CSS Loader shows the color picker only in Custom mode. Its current theme format cannot hide or disable the separate outline and halo dropdowns in Steam default mode. They are labeled **Custom only** and have no effect in Steam default mode.
+- Switching back to **Steam default** removes the custom outline and halo without discarding your custom settings. Artwork glow keeps its separate setting. CSS Loader saves all settings across refreshes.
 - These effects follow pointer hover and controller focus, scale with the cover, and leave the Library shortcut and Library grid unchanged.
 - If you installed the earlier development build with **Outline thickness** and **Glow strength**, set their values again under the new **Custom only** names. Saved profiles that use the old names must also be saved again.
+- **Existing appearance** was renamed **Steam default**. Re-save profiles that refer to the old option name. Updated Custom defaults do not overwrite saved color, thickness, or halo choices.
+
+### Why the glow differs between games
+
+Steam creates the broad artwork glow from a copy of the selected cover. Its current filter multiplies saturation by three and brightness by two, then applies a 3 px blur. Bright colors and large bright areas in the cover therefore produce different glow colors and brightness, even at the same Artwork glow strength.
+
+The custom halo has a fixed color, but its background changes how visible it is. For example, a white halo blends into Deadpool's white background more than it does into the colored backgrounds of Wobbly Life or Transformers Fall of Cybertron. A stronger-looking glow does not necessarily mean a stronger setting.
+
+For a single-color effect, set **Artwork glow → Off** and choose a Custom halo strength. This removes the artwork-dependent glow, but background contrast still affects the halo's appearance.
+
+### Defaults and manual reset
+
+The Custom starting values use Steam's current base outline color and width: white at 60% alpha, 2 px thick, with no added custom halo. These values do not recreate Steam's animated outline, outline offset, shadow, or artwork effect. For the native focus effects, select **Focus appearance → Steam default** and **Artwork glow → Normal**; other enabled themes remain in effect.
+
+The installed CSS Loader has no button to reset this group of settings, and its theme format cannot add one. To reset Custom manually:
+
+1. Select **Custom** and open **Highlight color**.
+2. Set Hue to **0**, Saturation to **0**, Lightness to **100**, and Alpha to **0.6**, then select **Confirm**.
+3. Set **Outline thickness → Medium** and **Halo strength → Off**.
+4. Set **Artwork glow → Normal** if you also want to restore the existing artwork effect.
+
+These steps leave both zoom sliders unchanged.
 
 ## License and credits
 
