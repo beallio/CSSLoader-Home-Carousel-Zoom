@@ -4,7 +4,7 @@ A [CSS Loader](https://docs.deckthemes.com/CSSLoader/) theme for SteamOS Gaming 
 
 **Two sliders set the size: Base zoom (%) from 100 to 200 in steps of 10, and Fine adjustment from +0 to +10 in steps of 1. The two values are added, which gives 100% to 210% total. Default: 110 + 5 = 115%.**
 
-The focus ring and attached title move with the cover. The Library grid is not changed, and the **View more in your Library** card at the end of the row keeps its normal size.
+The focus ring and attached title move with the cover. The Library grid is not changed, and the **View more in your Library** card at the end of the row keeps its normal size. Selecting that card no longer makes the Home page jump vertically; normal horizontal scrolling remains.
 
 ## Screenshots
 
@@ -26,11 +26,13 @@ Percentages apply to the selected card's existing appearance. **100% keeps Steam
 
 You need [Decky Loader](https://decky.xyz/) and its CSS Loader plugin.
 
+The two sliders and custom focus controls require **v1.1.0 or later**. If the latest release is older, use the repository installation below.
+
 ### From a release
 
-1. Download `Home-Carousel-Zoom-v1.0.0.zip` from [Releases](https://github.com/beallio/CSSLoader-Home-Carousel-Zoom/releases).
+1. Download the theme ZIP from [Releases](https://github.com/beallio/CSSLoader-Home-Carousel-Zoom/releases).
 2. In Desktop Mode, create `~/homebrew/themes/Home Carousel Zoom/`.
-3. Extract the ZIP into that folder. `theme.json`, `shared.css`, and `LICENSE` must be directly inside it, not inside another nested folder.
+3. Extract all files into that folder, without another nested folder. For v1.1.0, it must contain `theme.json`, `shared.css`, `focus.css`, and `LICENSE`.
 4. Return to Gaming Mode. Open **… → Decky → CSS Loader**, then select **Refresh**.
 5. Enable **Home Carousel Zoom**.
 
@@ -52,8 +54,25 @@ Open **… → Decky → CSS Loader → Home Carousel Zoom** and expand the them
 - Use left/right controller input on each slider to decrease/increase its value.
 - Different combinations can give the same total. `100 + 10` and `110 + 0` both give 110%.
 - Pointer hover and controller focus both trigger zoom. A touchscreen has no persistent hover state.
-- Covers grow over adjacent cards rather than pushing them apart. Large values cover more of a neighboring card or title, and above approximately 150% the selected cover reaches the top of the screen and hides part of the status bar.
+- Covers grow over adjacent cards rather than pushing them apart. Large values can cover neighboring cards, titles, or the status bar. On the stock Steam layout, high zoom can extend above the screen and cut off the cover. Lower the zoom if the cover does not fit.
 - If you used the earlier single **Zoom size** slider, your saved value does not transfer. The theme starts at the 115% default, so set the two sliders again after the update.
+
+## Adjust the highlight and glow
+
+In the same theme settings, leave **Focus appearance** set to **Existing appearance** to keep Steam's and your other themes' focus effects. This is the default.
+
+Select **Custom** to replace the Home cover's animated outline and artwork-colored glow:
+
+| Setting | Options | Default |
+| --- | --- | --- |
+| **Highlight color** | Open the color picker; adjust hue, saturation, lightness, and alpha, then select **Confirm** | Light blue (`#5ac8fa`) |
+| **Outline thickness** | Thin / Medium / Thick | Medium |
+| **Glow strength** | Off / Low / Medium / High | Medium |
+
+- These controls affect only **Custom** appearance. The color picker appears when Custom is selected.
+- **Off** removes the added glow but keeps the outline. Color-picker alpha controls the opacity of both; alpha zero makes both invisible.
+- The custom effects follow pointer hover and controller focus, scale with the cover, and leave the Library shortcut and Library grid unchanged.
+- Switching back to **Existing appearance** restores the previous effects without discarding your custom settings. CSS Loader saves the settings across refreshes.
 
 ## License and credits
 
