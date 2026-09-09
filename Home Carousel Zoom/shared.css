@@ -1,12 +1,18 @@
+/* Total zoom, and the headroom the enlarged card needs above the row. */
+:root {
+  --hcz-zoom: calc(var(--hcz-base-scale, 1.1) + var(--hcz-fine-scale, 0.05));
+  --hcz-reserve: max(140px, calc(47.5vh * (var(--hcz-zoom) - 1) - 30px));
+}
+
 /* CSS Loader maps these readable Steam selectors to the current client classes. */
 
 /* Keep horizontal scrolling. Reserve space above the row for enlarged cards. */
 .gamepadhomerecentgames_RecentGamesContainer_2_cRk
   .basicgamecarousel_BasicGameCarousel_3MdH5 {
   box-sizing: content-box !important;
-  padding: 140px 0 16px !important;
-  margin-bottom: -156px !important;
-  translate: 0 -128px;
+  padding: var(--hcz-reserve) 0 16px !important;
+  margin-bottom: calc(-1 * (var(--hcz-reserve) + 16px)) !important;
+  translate: 0 calc(-1 * (var(--hcz-reserve) - 12px));
 }
 
 /* Retain Steam's horizontal inset without widening the scroll viewport. */
@@ -16,17 +22,17 @@
   margin-inline: 2.8vw;
 }
 
-/* Scale the card wrapper so the focus ring and attached title move with it. */
+/* Scale game wrappers, not the Library shortcut; keep the ring and title attached. */
 .gamepadhomerecentgames_RecentGamesContainer_2_cRk
-  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN {
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH) {
   scale: none;
   transform-origin: center bottom;
   transition: scale 160ms ease-out;
 }
 
 .gamepadhomerecentgames_RecentGamesContainer_2_cRk
-  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:is(:hover, .gpfocuswithin) {
-  scale: var(--hcz-scale, 1.15);
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH):is(:hover, .gpfocuswithin) {
+  scale: var(--hcz-zoom);
   z-index: 20;
 }
 
@@ -38,7 +44,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .gamepadhomerecentgames_RecentGamesContainer_2_cRk
-    .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN {
+    .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH) {
     transition: none;
   }
 }

@@ -1,25 +1,46 @@
 {
   "name": "Home Carousel Zoom",
   "author": "beallio",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "target": "Home",
   "manifest_version": 8,
-  "description": "Enlarge Home carousel covers on pointer hover or controller selection. Adjust Zoom size from 100% (no extra zoom) to 130%. The focus ring and title move with the cover. Does not change the Library grid.",
+  "description": "Enlarge Home carousel covers on pointer hover or controller selection. Add Base zoom (100-200%) and Fine adjustment (+0-10 percentage points) for 100-210% total zoom. Default: 115%. The focus ring and title move with the cover. The Library grid and View more in your Library card keep their normal size.",
   "inject": {
     "shared.css": ["bigpicture"]
   },
   "patches": {
-    "Zoom size": {
+    "Base zoom (%)": {
       "type": "slider",
-      "default": "115%",
+      "default": "110",
       "values": {
-        "100%": {"--hcz-scale": ["1", "bigpicture"]},
-        "105%": {"--hcz-scale": ["1.05", "bigpicture"]},
-        "110%": {"--hcz-scale": ["1.1", "bigpicture"]},
-        "115%": {"--hcz-scale": ["1.15", "bigpicture"]},
-        "120%": {"--hcz-scale": ["1.2", "bigpicture"]},
-        "125%": {"--hcz-scale": ["1.25", "bigpicture"]},
-        "130%": {"--hcz-scale": ["1.3", "bigpicture"]}
+        "100": {"--hcz-base-scale": ["1", "bigpicture"]},
+        "110": {"--hcz-base-scale": ["1.1", "bigpicture"]},
+        "120": {"--hcz-base-scale": ["1.2", "bigpicture"]},
+        "130": {"--hcz-base-scale": ["1.3", "bigpicture"]},
+        "140": {"--hcz-base-scale": ["1.4", "bigpicture"]},
+        "150": {"--hcz-base-scale": ["1.5", "bigpicture"]},
+        "160": {"--hcz-base-scale": ["1.6", "bigpicture"]},
+        "170": {"--hcz-base-scale": ["1.7", "bigpicture"]},
+        "180": {"--hcz-base-scale": ["1.8", "bigpicture"]},
+        "190": {"--hcz-base-scale": ["1.9", "bigpicture"]},
+        "200": {"--hcz-base-scale": ["2", "bigpicture"]}
+      }
+    },
+    "Fine adjustment": {
+      "type": "slider",
+      "default": "+5",
+      "values": {
+        "+0": {"--hcz-fine-scale": ["0", "bigpicture"]},
+        "+1": {"--hcz-fine-scale": ["0.01", "bigpicture"]},
+        "+2": {"--hcz-fine-scale": ["0.02", "bigpicture"]},
+        "+3": {"--hcz-fine-scale": ["0.03", "bigpicture"]},
+        "+4": {"--hcz-fine-scale": ["0.04", "bigpicture"]},
+        "+5": {"--hcz-fine-scale": ["0.05", "bigpicture"]},
+        "+6": {"--hcz-fine-scale": ["0.06", "bigpicture"]},
+        "+7": {"--hcz-fine-scale": ["0.07", "bigpicture"]},
+        "+8": {"--hcz-fine-scale": ["0.08", "bigpicture"]},
+        "+9": {"--hcz-fine-scale": ["0.09", "bigpicture"]},
+        "+10": {"--hcz-fine-scale": ["0.1", "bigpicture"]}
       }
     }
   }
