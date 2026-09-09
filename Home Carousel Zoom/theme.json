@@ -4,7 +4,7 @@
   "version": "v1.1.0",
   "target": "Home",
   "manifest_version": 8,
-  "description": "Enlarge Home carousel covers on pointer hover or controller selection. Add Base zoom (100-200%) and Fine adjustment (+0-10 percentage points) for 100-210% total zoom. Default: 115%. The focus ring and title move with the cover. The Library grid and View more in your Library card keep their normal size.",
+  "description": "Enlarge Home carousel covers on pointer hover or controller selection. Add Base zoom (100-200%) and Fine adjustment (+0-10 percentage points) for 100-210% total zoom. Default: 115%. Keep the existing focus appearance or customize the highlight color, outline thickness, and glow strength. The Library grid and View more in your Library card keep their normal size.",
   "inject": {
     "shared.css": ["bigpicture"]
   },
@@ -41,6 +41,55 @@
         "+8": {"--hcz-fine-scale": ["0.08", "bigpicture"]},
         "+9": {"--hcz-fine-scale": ["0.09", "bigpicture"]},
         "+10": {"--hcz-fine-scale": ["0.1", "bigpicture"]}
+      }
+    },
+    "Focus appearance": {
+      "type": "dropdown",
+      "default": "Existing appearance",
+      "values": {
+        "Existing appearance": {},
+        "Custom": {"focus.css": ["bigpicture"]}
+      },
+      "components": [
+        {
+          "name": "Highlight color",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#5ac8fa",
+          "css_variable": "hcz-focus-color",
+          "tabs": ["bigpicture"]
+        }
+      ]
+    },
+    "Outline thickness": {
+      "type": "dropdown",
+      "default": "Medium",
+      "values": {
+        "Thin": {"--hcz-focus-width": ["1px", "bigpicture"]},
+        "Medium": {"--hcz-focus-width": ["2px", "bigpicture"]},
+        "Thick": {"--hcz-focus-width": ["3px", "bigpicture"]}
+      }
+    },
+    "Glow strength": {
+      "type": "dropdown",
+      "default": "Medium",
+      "values": {
+        "Off": {
+          "--hcz-glow-blur": ["0px", "bigpicture"],
+          "--hcz-glow-spread": ["0px", "bigpicture"]
+        },
+        "Low": {
+          "--hcz-glow-blur": ["6px", "bigpicture"],
+          "--hcz-glow-spread": ["1px", "bigpicture"]
+        },
+        "Medium": {
+          "--hcz-glow-blur": ["12px", "bigpicture"],
+          "--hcz-glow-spread": ["2px", "bigpicture"]
+        },
+        "High": {
+          "--hcz-glow-blur": ["20px", "bigpicture"],
+          "--hcz-glow-spread": ["4px", "bigpicture"]
+        }
       }
     }
   }

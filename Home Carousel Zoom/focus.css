@@ -1,0 +1,19 @@
+/* Only loaded for Custom appearance. Keep the Library shortcut and grid untouched. */
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH):is(:hover, .gpfocuswithin)
+  .appportrait_LibraryItemBox_WYgDg {
+  box-shadow:
+    0 0 0 var(--hcz-focus-width, 2px) var(--hcz-focus-color, #5ac8fa),
+    0 0 var(--hcz-glow-blur, 12px) var(--hcz-glow-spread, 2px)
+      color-mix(in srgb, var(--hcz-focus-color, #5ac8fa) 65%, transparent) !important;
+}
+
+/* Replace the native animated outline and artwork glow, not the focus animation. */
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH):is(:hover, .gpfocuswithin)
+  .appportrait_LibraryItemBox_WYgDg::after,
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH):is(:hover, .gpfocuswithin)
+  .basicgamecarousel_CarouselCapsuleBackgroundGlow_1H3Kf {
+  opacity: 0 !important;
+}
