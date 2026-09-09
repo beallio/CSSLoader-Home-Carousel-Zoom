@@ -44,7 +44,7 @@
       }
     },
     "Focus appearance": {
-      "type": "dropdown",
+      "type": "slider",
       "default": "Steam default",
       "values": {
         "Steam default": {},
@@ -62,7 +62,7 @@
       ]
     },
     "Artwork glow (Both modes)": {
-      "type": "dropdown",
+      "type": "slider",
       "default": "Normal",
       "values": {
         "Normal": {},
@@ -85,7 +85,7 @@
       }
     },
     "Outline thickness (Custom only)": {
-      "type": "dropdown",
+      "type": "slider",
       "default": "Medium",
       "values": {
         "Thin": {"--hcz-focus-width": ["1px", "bigpicture"]},
@@ -94,7 +94,7 @@
       }
     },
     "Halo strength (Custom only)": {
-      "type": "dropdown",
+      "type": "slider",
       "default": "Off",
       "values": {
         "Off": {

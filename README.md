@@ -42,7 +42,7 @@ Copy the complete [`Home Carousel Zoom`](Home%20Carousel%20Zoom) folder into `~/
 
 ## Adjust the size
 
-Open **… → Decky → CSS Loader → Home Carousel Zoom** and expand the theme's settings. There are two sliders:
+Open **… → Decky → CSS Loader → Home Carousel Zoom** and expand the theme's settings. The two zoom sliders are:
 
 | Slider | Range | Step | Default |
 | --- | --- | --- | --- |
@@ -59,12 +59,14 @@ Open **… → Decky → CSS Loader → Home Carousel Zoom** and expand the them
 
 ## Adjust the highlight and glow
 
-**Focus appearance** selects who controls the Home cover's outline:
+The **Focus appearance** slider selects who controls the Home cover's outline:
 
 - **Steam default** (default) leaves Steam's outline in place. Other enabled themes can still change its appearance; this option does not disable them.
 - **Custom** adds a fixed-color outline and an optional halo, and hides the cover's animated sheen. It does not remove the artwork-colored glow.
 
 The two glows are separate. **Artwork glow** is the broad, translucent effect that takes its colors from the cover art. **Halo strength** controls the added glow around the custom outline.
+
+Focus appearance, Artwork glow, Outline thickness, and Halo strength use sliders with named stops. Use left/right controller input to move between the listed choices; these are discrete settings, not continuous ranges. Highlight color still uses the color picker. Saved selections from the earlier dropdown controls are retained.
 
 | Setting | Works in | Options | Default |
 | --- | --- | --- | --- |
@@ -76,7 +78,7 @@ The two glows are separate. **Artwork glow** is the broad, translucent effect th
 - **Artwork glow → Normal** leaves Steam's and your other themes' artwork effect unchanged. **Off** hides it. Low, Medium, and High set its opacity to 25%, 50%, and 100%; they do not change its colors.
 - **Halo strength → Off** removes only the custom halo. It keeps the custom outline and does not change Artwork glow.
 - Color-picker alpha controls the opacity of the custom outline and halo, not Artwork glow. Alpha zero makes the custom outline and halo invisible.
-- CSS Loader shows the color picker only in Custom mode. Its current theme format cannot hide or disable the separate outline and halo dropdowns in Steam default mode. They are labeled **Custom only** and have no effect in Steam default mode.
+- CSS Loader shows the color picker only in Custom mode. Its current theme format cannot hide or disable the separate outline and halo sliders in Steam default mode. They are labeled **Custom only** and have no effect in Steam default mode.
 - Switching back to **Steam default** removes the custom outline and halo without discarding your custom settings. Artwork glow keeps its separate setting. CSS Loader saves all settings across refreshes.
 - These effects follow pointer hover and controller focus, scale with the cover, and leave the Library shortcut and Library grid unchanged.
 - If you installed the earlier development build with **Outline thickness** and **Glow strength**, set their values again under the new **Custom only** names. Saved profiles that use the old names must also be saved again.
