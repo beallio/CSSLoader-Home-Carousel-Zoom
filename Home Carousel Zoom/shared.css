@@ -6,13 +6,19 @@
 
 /* CSS Loader maps these readable Steam selectors to the current client classes. */
 
+/* Let Steam's focus scrolling see the offset, without changing native margins. */
+.gamepadhomerecentgames_RecentGamesContainer_2_cRk
+  :has(> .basicgamecarousel_BasicGameCarousel_3MdH5) {
+  position: relative;
+  top: calc(12px - var(--hcz-reserve));
+}
+
 /* Keep horizontal scrolling. Reserve space above the row for enlarged cards. */
 .gamepadhomerecentgames_RecentGamesContainer_2_cRk
   .basicgamecarousel_BasicGameCarousel_3MdH5 {
   box-sizing: content-box !important;
   padding: var(--hcz-reserve) 0 16px !important;
   margin-bottom: calc(-1 * (var(--hcz-reserve) + 16px)) !important;
-  translate: 0 calc(-1 * (var(--hcz-reserve) - 12px));
 }
 
 /* Retain Steam's horizontal inset without widening the scroll viewport. */
