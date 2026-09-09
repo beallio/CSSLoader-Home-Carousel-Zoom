@@ -4,7 +4,7 @@
   "version": "v1.1.0",
   "target": "Home",
   "manifest_version": 8,
-  "description": "Enlarge Home carousel covers on pointer hover or controller selection. Add Base zoom (100-200%) and Fine adjustment (+0-10 percentage points) for 100-210% total zoom. Default: 115%. Keep the existing focus appearance or customize the highlight color, outline thickness, and glow strength. The Library grid and View more in your Library card keep their normal size.",
+  "description": "Enlarge Home carousel covers from 100% to 210% with additive zoom sliders. Default: 115%. Artwork glow works in both focus modes. Highlight color, outline thickness, and halo strength work only in Custom mode. The Library grid and View more in your Library card keep their normal size.",
   "inject": {
     "shared.css": ["bigpicture"]
   },
@@ -61,7 +61,30 @@
         }
       ]
     },
-    "Outline thickness": {
+    "Artwork glow (Both modes)": {
+      "type": "dropdown",
+      "default": "Normal",
+      "values": {
+        "Normal": {},
+        "Off": {
+          "artwork.css": ["bigpicture"],
+          "--hcz-artwork-opacity": ["0", "bigpicture"]
+        },
+        "Low": {
+          "artwork.css": ["bigpicture"],
+          "--hcz-artwork-opacity": ["0.25", "bigpicture"]
+        },
+        "Medium": {
+          "artwork.css": ["bigpicture"],
+          "--hcz-artwork-opacity": ["0.5", "bigpicture"]
+        },
+        "High": {
+          "artwork.css": ["bigpicture"],
+          "--hcz-artwork-opacity": ["1", "bigpicture"]
+        }
+      }
+    },
+    "Outline thickness (Custom only)": {
       "type": "dropdown",
       "default": "Medium",
       "values": {
@@ -70,7 +93,7 @@
         "Thick": {"--hcz-focus-width": ["3px", "bigpicture"]}
       }
     },
-    "Glow strength": {
+    "Halo strength (Custom only)": {
       "type": "dropdown",
       "default": "Medium",
       "values": {

@@ -8,12 +8,9 @@
       color-mix(in srgb, var(--hcz-focus-color, #5ac8fa) 65%, transparent) !important;
 }
 
-/* Replace the native animated outline and artwork glow, not the focus animation. */
+/* Replace only the animated outline; artwork glow is controlled separately. */
 .gamepadhomerecentgames_RecentGamesContainer_2_cRk
   .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH):is(:hover, .gpfocuswithin)
-  .appportrait_LibraryItemBox_WYgDg::after,
-.gamepadhomerecentgames_RecentGamesContainer_2_cRk
-  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH):is(:hover, .gpfocuswithin)
-  .basicgamecarousel_CarouselCapsuleBackgroundGlow_1H3Kf {
+  .appportrait_LibraryItemBox_WYgDg::after {
   opacity: 0 !important;
 }

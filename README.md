@@ -26,13 +26,13 @@ Percentages apply to the selected card's existing appearance. **100% keeps Steam
 
 You need [Decky Loader](https://decky.xyz/) and its CSS Loader plugin.
 
-The two sliders and custom focus controls require **v1.1.0 or later**. If the latest release is older, use the repository installation below.
+The two sliders, artwork glow, and custom focus controls require **v1.1.0 or later**. If the latest release is older, use the repository installation below.
 
 ### From a release
 
 1. Download the theme ZIP from [Releases](https://github.com/beallio/CSSLoader-Home-Carousel-Zoom/releases).
 2. In Desktop Mode, create `~/homebrew/themes/Home Carousel Zoom/`.
-3. Extract all files into that folder, without another nested folder. For v1.1.0, it must contain `theme.json`, `shared.css`, `focus.css`, and `LICENSE`.
+3. Extract all files into that folder, without another nested folder. For v1.1.0, it must contain `theme.json`, `shared.css`, `focus.css`, `artwork.css`, and `LICENSE`.
 4. Return to Gaming Mode. Open **… → Decky → CSS Loader**, then select **Refresh**.
 5. Enable **Home Carousel Zoom**.
 
@@ -59,20 +59,27 @@ Open **… → Decky → CSS Loader → Home Carousel Zoom** and expand the them
 
 ## Adjust the highlight and glow
 
-In the same theme settings, leave **Focus appearance** set to **Existing appearance** to keep Steam's and your other themes' focus effects. This is the default.
+**Focus appearance** selects who controls the Home cover's outline:
 
-Select **Custom** to replace the Home cover's animated outline and artwork-colored glow:
+- **Existing appearance** (default) keeps Steam's and your other themes' outline.
+- **Custom** replaces the animated outline with a fixed-color outline and an optional halo. It does not remove the artwork-colored glow.
 
-| Setting | Options | Default |
-| --- | --- | --- |
-| **Highlight color** | Open the color picker; adjust hue, saturation, lightness, and alpha, then select **Confirm** | Light blue (`#5ac8fa`) |
-| **Outline thickness** | Thin / Medium / Thick | Medium |
-| **Glow strength** | Off / Low / Medium / High | Medium |
+The two glows are separate. **Artwork glow** is the broad, translucent effect that takes its colors from the cover art. **Halo strength** controls the added glow around the custom outline.
 
-- These controls affect only **Custom** appearance. The color picker appears when Custom is selected.
-- **Off** removes the added glow but keeps the outline. Color-picker alpha controls the opacity of both; alpha zero makes both invisible.
-- The custom effects follow pointer hover and controller focus, scale with the cover, and leave the Library shortcut and Library grid unchanged.
-- Switching back to **Existing appearance** restores the previous effects without discarding your custom settings. CSS Loader saves the settings across refreshes.
+| Setting | Works in | Options | Default |
+| --- | --- | --- | --- |
+| **Artwork glow (Both modes)** | Existing appearance and Custom | Normal / Off / Low / Medium / High | Normal |
+| **Highlight color** | Custom only | Open the color picker; adjust hue, saturation, lightness, and alpha, then select **Confirm** | Light blue (`#5ac8fa`) |
+| **Outline thickness (Custom only)** | Custom only | Thin / Medium / Thick | Medium |
+| **Halo strength (Custom only)** | Custom only | Off / Low / Medium / High | Medium |
+
+- **Artwork glow → Normal** leaves Steam's and your other themes' artwork effect unchanged. **Off** hides it. Low, Medium, and High set its opacity to 25%, 50%, and 100%; they do not change its colors.
+- **Halo strength → Off** removes only the custom halo. It keeps the custom outline and does not change Artwork glow.
+- Color-picker alpha controls the opacity of the custom outline and halo, not Artwork glow. Alpha zero makes the custom outline and halo invisible.
+- CSS Loader shows the color picker only in Custom mode. Its current theme format cannot hide or disable the separate outline and halo dropdowns in Existing mode. They are labeled **Custom only** and have no effect in Existing mode.
+- Switching back to **Existing appearance** restores the previous outline without discarding your custom settings. Artwork glow keeps its separate setting. CSS Loader saves all settings across refreshes.
+- These effects follow pointer hover and controller focus, scale with the cover, and leave the Library shortcut and Library grid unchanged.
+- If you installed the earlier development build with **Outline thickness** and **Glow strength**, set their values again under the new **Custom only** names. Saved profiles that use the old names must also be saved again.
 
 ## License and credits
 
