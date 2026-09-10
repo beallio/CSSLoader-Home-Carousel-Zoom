@@ -59,49 +59,63 @@ Open **… → Decky → CSS Loader → Home Carousel Zoom** and expand the them
 
 ## Adjust the highlight and glow
 
-The **Focus appearance** slider selects who controls the Home cover's outline:
+The **Focus appearance** selector controls the Home cover's outline:
 
 - **Steam default** (default) leaves Steam's outline in place. Other enabled themes can still change its appearance; this option does not disable them.
 - **Custom** adds a fixed-color outline and an optional halo, and hides the cover's animated sheen. It does not remove the artwork-colored glow.
 
-The two glows are separate. **Artwork glow** is the broad, translucent effect that takes its colors from the cover art. **Halo strength** controls the added glow around the custom outline.
+The two glows are separate. **Artwork glow** is the broad, translucent effect that takes its colors from the cover art. **Halo size** controls the blur radius of the added glow around the custom outline.
 
-Focus appearance, Artwork glow, Outline thickness, and Halo strength use sliders with named stops. Use left/right controller input to move between the listed choices; these are discrete settings, not continuous ranges. Highlight color still uses the color picker. Saved selections from the earlier dropdown controls are retained.
+Outline thickness, Artwork opacity, and Halo size use numeric sliders with one-unit steps. Use left/right controller input to adjust them. Focus appearance remains a Steam default / Custom selector, and Highlight color still uses the color picker.
 
-| Setting | Works in | Options | Default |
+| Setting | Works when | Range or choices | Default |
 | --- | --- | --- | --- |
-| **Artwork glow (Both modes)** | Steam default and Custom | Normal / Off / Low / Medium / High | Normal |
-| **Highlight color** | Custom only | Open the color picker; adjust hue, saturation, lightness, and alpha, then select **Confirm** | White at 60% alpha (`#ffffff99`) |
-| **Outline thickness (Custom only)** | Custom only | Thin / Medium / Thick | Medium (2 px) |
-| **Halo strength (Custom only)** | Custom only | Off / Low / Medium / High | Off |
+| **Use Steam's artwork glow** | Both focus modes | On / Off | On |
+| **Artwork opacity (%, override only)** | Use Steam's artwork glow is Off, in either focus mode | 0–100%, step 1% | 50% |
+| **Highlight color** | Custom only | Hue, saturation, lightness, and alpha | White at 60% alpha (`#ffffff99`) |
+| **Outline thickness (px, Custom only)** | Custom only | 1–10 px, step 1 px | 2 px |
+| **Halo size (px, Custom only)** | Custom only | 0–30 px, step 1 px | 0 px |
 
-- **Artwork glow → Normal** leaves Steam's and your other themes' artwork effect unchanged. **Off** hides it. Low, Medium, and High set its opacity to 25%, 50%, and 100%; they do not change its colors.
-- **Halo strength → Off** removes only the custom halo. It keeps the custom outline and does not change Artwork glow.
-- Color-picker alpha controls the opacity of the custom outline and halo, not Artwork glow. Alpha zero makes the custom outline and halo invisible.
-- CSS Loader shows the color picker only in Custom mode. Its current theme format cannot hide or disable the separate outline and halo sliders in Steam default mode. They are labeled **Custom only** and have no effect in Steam default mode.
-- Switching back to **Steam default** removes the custom outline and halo without discarding your custom settings. Artwork glow keeps its separate setting. CSS Loader saves all settings across refreshes.
+- **Use Steam's artwork glow → On** leaves Steam's and your other themes' artwork effect unchanged. The Artwork opacity slider keeps its saved value but has no effect.
+- Turn that toggle **Off** to use the numeric Artwork opacity slider. **0%** hides the artwork glow; **100%** makes its layer fully opaque. This does not change the artwork's colors.
+- **Halo size → 0** removes only the added custom halo. It keeps the custom outline and does not change Artwork opacity.
+- Halo size sets the blur radius. Its spread increases by 1 px for each full 5 px of blur. For example, size 12 uses 12 px blur and 2 px spread. This retains the effects of the earlier halo presets.
+- Color-picker alpha controls the opacity of the custom outline and halo, not Artwork opacity. Alpha zero makes the custom outline and halo invisible.
+- CSS Loader shows the color picker only in Custom mode. Its current theme format cannot hide or disable the separate numeric sliders when they are inactive. Their labels state **Custom only** or **override only**.
+- Switching back to **Steam default** removes the custom outline and halo without discarding your custom settings. The artwork toggle and opacity keep their separate settings. CSS Loader saves settings across refreshes.
 - These effects follow pointer hover and controller focus, scale with the cover, and leave the Library shortcut and Library grid unchanged.
-- If you installed the earlier development build with **Outline thickness** and **Glow strength**, set their values again under the new **Custom only** names. Saved profiles that use the old names must also be saved again.
-- **Existing appearance** was renamed **Steam default**. Re-save profiles that refer to the old option name. Updated Custom defaults do not overwrite saved color, thickness, or halo choices.
+
+### Updating from preset-based controls
+
+Record your selections before updating. The renamed numeric controls do not automatically convert old saved presets. After the update, use these equivalent values, then save your CSS Loader profiles again:
+
+| Earlier control | Earlier value | New value |
+| --- | --- | --- |
+| Outline thickness | Thin / Medium / Thick | 1 / 2 / 3 px |
+| Halo strength (previously Glow strength) | Off / Low / Medium / High | Halo size 0 / 6 / 12 / 20 px |
+| Artwork glow | Normal | Use Steam's artwork glow On |
+| Artwork glow | Off / Low / Medium / High | Use Steam's artwork glow Off; Artwork opacity 0 / 25 / 50 / 100% |
+
+The zoom sliders, Focus appearance choices, and Highlight color have not changed. **Existing appearance** was previously renamed **Steam default**; profiles that still use that old option name must also be saved again.
 
 ### Why the glow differs between games
 
-Steam creates the broad artwork glow from a copy of the selected cover. Its current filter multiplies saturation by three and brightness by two, then applies a 3 px blur. Bright colors and large bright areas in the cover therefore produce different glow colors and brightness, even at the same Artwork glow strength.
+Steam creates the broad artwork glow from a copy of the selected cover. Its current filter multiplies saturation by three and brightness by two, then applies a 3 px blur. Bright colors and large bright areas in the cover therefore produce different glow colors and brightness, even at the same Artwork opacity.
 
 The custom halo has a fixed color, but its background changes how visible it is. For example, a white halo blends into Deadpool's white background more than it does into the colored backgrounds of Wobbly Life or Transformers Fall of Cybertron. A stronger-looking glow does not necessarily mean a stronger setting.
 
-For a single-color effect, set **Artwork glow → Off** and choose a Custom halo strength. This removes the artwork-dependent glow, but background contrast still affects the halo's appearance.
+For a single-color effect, turn **Use Steam's artwork glow Off**, set **Artwork opacity to 0%**, and choose a Custom halo size above zero. This removes the artwork-dependent glow, but background contrast still affects the halo's appearance.
 
 ### Defaults and manual reset
 
-The Custom starting values use Steam's current base outline color and width: white at 60% alpha, 2 px thick, with no added custom halo. These values do not recreate Steam's animated outline, outline offset, shadow, or artwork effect. For the native focus effects, select **Focus appearance → Steam default** and **Artwork glow → Normal**; other enabled themes remain in effect.
+The Custom starting values use Steam's current base outline color and width: white at 60% alpha, 2 px thick, with no added custom halo. These values do not recreate Steam's animated outline, outline offset, shadow, or artwork effect. For the native focus effects, select **Focus appearance → Steam default** and turn **Use Steam's artwork glow On**; other enabled themes remain in effect.
 
 The installed CSS Loader has no button to reset this group of settings, and its theme format cannot add one. To reset Custom manually:
 
 1. Select **Custom** and open **Highlight color**.
 2. Set Hue to **0**, Saturation to **0**, Lightness to **100**, and Alpha to **0.6**, then select **Confirm**.
-3. Set **Outline thickness → Medium** and **Halo strength → Off**.
-4. Set **Artwork glow → Normal** if you also want to restore the existing artwork effect.
+3. Set **Outline thickness to 2 px** and **Halo size to 0 px**.
+4. To reset the artwork controls too, set **Artwork opacity to 50%** and turn **Use Steam's artwork glow On**. The stored 50% value applies only if you later turn the toggle Off.
 
 These steps leave both zoom sliders unchanged.
 

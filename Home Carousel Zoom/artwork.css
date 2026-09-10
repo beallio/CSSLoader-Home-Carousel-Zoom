@@ -1,4 +1,4 @@
-/* Explicit artwork strength applies in both focus modes; Normal leaves native CSS alone. */
+/* Loaded only when Use Steam's artwork glow is off; applies in both focus modes. */
 .gamepadhomerecentgames_RecentGamesContainer_2_cRk
   .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.basicgamecarousel_TextBoxCarouselContents_3bvCH):is(:hover, .gpfocuswithin)
   .basicgamecarousel_CarouselCapsuleBackgroundGlow_1H3Kf {

@@ -44,7 +44,7 @@
       }
     },
     "Focus appearance": {
-      "type": "slider",
+      "type": "dropdown",
       "default": "Steam default",
       "values": {
         "Steam default": {},
@@ -61,58 +61,172 @@
         }
       ]
     },
-    "Artwork glow (Both modes)": {
-      "type": "slider",
-      "default": "Normal",
+    "Use Steam's artwork glow": {
+      "type": "checkbox",
+      "default": "Yes",
       "values": {
-        "Normal": {},
-        "Off": {
-          "artwork.css": ["bigpicture"],
-          "--hcz-artwork-opacity": ["0", "bigpicture"]
-        },
-        "Low": {
-          "artwork.css": ["bigpicture"],
-          "--hcz-artwork-opacity": ["0.25", "bigpicture"]
-        },
-        "Medium": {
-          "artwork.css": ["bigpicture"],
-          "--hcz-artwork-opacity": ["0.5", "bigpicture"]
-        },
-        "High": {
-          "artwork.css": ["bigpicture"],
-          "--hcz-artwork-opacity": ["1", "bigpicture"]
-        }
+        "Yes": {},
+        "No": {"artwork.css": ["bigpicture"]}
       }
     },
-    "Outline thickness (Custom only)": {
+    "Artwork opacity (%, override only)": {
       "type": "slider",
-      "default": "Medium",
+      "default": "50",
       "values": {
-        "Thin": {"--hcz-focus-width": ["1px", "bigpicture"]},
-        "Medium": {"--hcz-focus-width": ["2px", "bigpicture"]},
-        "Thick": {"--hcz-focus-width": ["3px", "bigpicture"]}
+        "0": {"--hcz-artwork-opacity": ["0", "bigpicture"]},
+        "1": {"--hcz-artwork-opacity": ["0.01", "bigpicture"]},
+        "2": {"--hcz-artwork-opacity": ["0.02", "bigpicture"]},
+        "3": {"--hcz-artwork-opacity": ["0.03", "bigpicture"]},
+        "4": {"--hcz-artwork-opacity": ["0.04", "bigpicture"]},
+        "5": {"--hcz-artwork-opacity": ["0.05", "bigpicture"]},
+        "6": {"--hcz-artwork-opacity": ["0.06", "bigpicture"]},
+        "7": {"--hcz-artwork-opacity": ["0.07", "bigpicture"]},
+        "8": {"--hcz-artwork-opacity": ["0.08", "bigpicture"]},
+        "9": {"--hcz-artwork-opacity": ["0.09", "bigpicture"]},
+        "10": {"--hcz-artwork-opacity": ["0.1", "bigpicture"]},
+        "11": {"--hcz-artwork-opacity": ["0.11", "bigpicture"]},
+        "12": {"--hcz-artwork-opacity": ["0.12", "bigpicture"]},
+        "13": {"--hcz-artwork-opacity": ["0.13", "bigpicture"]},
+        "14": {"--hcz-artwork-opacity": ["0.14", "bigpicture"]},
+        "15": {"--hcz-artwork-opacity": ["0.15", "bigpicture"]},
+        "16": {"--hcz-artwork-opacity": ["0.16", "bigpicture"]},
+        "17": {"--hcz-artwork-opacity": ["0.17", "bigpicture"]},
+        "18": {"--hcz-artwork-opacity": ["0.18", "bigpicture"]},
+        "19": {"--hcz-artwork-opacity": ["0.19", "bigpicture"]},
+        "20": {"--hcz-artwork-opacity": ["0.2", "bigpicture"]},
+        "21": {"--hcz-artwork-opacity": ["0.21", "bigpicture"]},
+        "22": {"--hcz-artwork-opacity": ["0.22", "bigpicture"]},
+        "23": {"--hcz-artwork-opacity": ["0.23", "bigpicture"]},
+        "24": {"--hcz-artwork-opacity": ["0.24", "bigpicture"]},
+        "25": {"--hcz-artwork-opacity": ["0.25", "bigpicture"]},
+        "26": {"--hcz-artwork-opacity": ["0.26", "bigpicture"]},
+        "27": {"--hcz-artwork-opacity": ["0.27", "bigpicture"]},
+        "28": {"--hcz-artwork-opacity": ["0.28", "bigpicture"]},
+        "29": {"--hcz-artwork-opacity": ["0.29", "bigpicture"]},
+        "30": {"--hcz-artwork-opacity": ["0.3", "bigpicture"]},
+        "31": {"--hcz-artwork-opacity": ["0.31", "bigpicture"]},
+        "32": {"--hcz-artwork-opacity": ["0.32", "bigpicture"]},
+        "33": {"--hcz-artwork-opacity": ["0.33", "bigpicture"]},
+        "34": {"--hcz-artwork-opacity": ["0.34", "bigpicture"]},
+        "35": {"--hcz-artwork-opacity": ["0.35", "bigpicture"]},
+        "36": {"--hcz-artwork-opacity": ["0.36", "bigpicture"]},
+        "37": {"--hcz-artwork-opacity": ["0.37", "bigpicture"]},
+        "38": {"--hcz-artwork-opacity": ["0.38", "bigpicture"]},
+        "39": {"--hcz-artwork-opacity": ["0.39", "bigpicture"]},
+        "40": {"--hcz-artwork-opacity": ["0.4", "bigpicture"]},
+        "41": {"--hcz-artwork-opacity": ["0.41", "bigpicture"]},
+        "42": {"--hcz-artwork-opacity": ["0.42", "bigpicture"]},
+        "43": {"--hcz-artwork-opacity": ["0.43", "bigpicture"]},
+        "44": {"--hcz-artwork-opacity": ["0.44", "bigpicture"]},
+        "45": {"--hcz-artwork-opacity": ["0.45", "bigpicture"]},
+        "46": {"--hcz-artwork-opacity": ["0.46", "bigpicture"]},
+        "47": {"--hcz-artwork-opacity": ["0.47", "bigpicture"]},
+        "48": {"--hcz-artwork-opacity": ["0.48", "bigpicture"]},
+        "49": {"--hcz-artwork-opacity": ["0.49", "bigpicture"]},
+        "50": {"--hcz-artwork-opacity": ["0.5", "bigpicture"]},
+        "51": {"--hcz-artwork-opacity": ["0.51", "bigpicture"]},
+        "52": {"--hcz-artwork-opacity": ["0.52", "bigpicture"]},
+        "53": {"--hcz-artwork-opacity": ["0.53", "bigpicture"]},
+        "54": {"--hcz-artwork-opacity": ["0.54", "bigpicture"]},
+        "55": {"--hcz-artwork-opacity": ["0.55", "bigpicture"]},
+        "56": {"--hcz-artwork-opacity": ["0.56", "bigpicture"]},
+        "57": {"--hcz-artwork-opacity": ["0.57", "bigpicture"]},
+        "58": {"--hcz-artwork-opacity": ["0.58", "bigpicture"]},
+        "59": {"--hcz-artwork-opacity": ["0.59", "bigpicture"]},
+        "60": {"--hcz-artwork-opacity": ["0.6", "bigpicture"]},
+        "61": {"--hcz-artwork-opacity": ["0.61", "bigpicture"]},
+        "62": {"--hcz-artwork-opacity": ["0.62", "bigpicture"]},
+        "63": {"--hcz-artwork-opacity": ["0.63", "bigpicture"]},
+        "64": {"--hcz-artwork-opacity": ["0.64", "bigpicture"]},
+        "65": {"--hcz-artwork-opacity": ["0.65", "bigpicture"]},
+        "66": {"--hcz-artwork-opacity": ["0.66", "bigpicture"]},
+        "67": {"--hcz-artwork-opacity": ["0.67", "bigpicture"]},
+        "68": {"--hcz-artwork-opacity": ["0.68", "bigpicture"]},
+        "69": {"--hcz-artwork-opacity": ["0.69", "bigpicture"]},
+        "70": {"--hcz-artwork-opacity": ["0.7", "bigpicture"]},
+        "71": {"--hcz-artwork-opacity": ["0.71", "bigpicture"]},
+        "72": {"--hcz-artwork-opacity": ["0.72", "bigpicture"]},
+        "73": {"--hcz-artwork-opacity": ["0.73", "bigpicture"]},
+        "74": {"--hcz-artwork-opacity": ["0.74", "bigpicture"]},
+        "75": {"--hcz-artwork-opacity": ["0.75", "bigpicture"]},
+        "76": {"--hcz-artwork-opacity": ["0.76", "bigpicture"]},
+        "77": {"--hcz-artwork-opacity": ["0.77", "bigpicture"]},
+        "78": {"--hcz-artwork-opacity": ["0.78", "bigpicture"]},
+        "79": {"--hcz-artwork-opacity": ["0.79", "bigpicture"]},
+        "80": {"--hcz-artwork-opacity": ["0.8", "bigpicture"]},
+        "81": {"--hcz-artwork-opacity": ["0.81", "bigpicture"]},
+        "82": {"--hcz-artwork-opacity": ["0.82", "bigpicture"]},
+        "83": {"--hcz-artwork-opacity": ["0.83", "bigpicture"]},
+        "84": {"--hcz-artwork-opacity": ["0.84", "bigpicture"]},
+        "85": {"--hcz-artwork-opacity": ["0.85", "bigpicture"]},
+        "86": {"--hcz-artwork-opacity": ["0.86", "bigpicture"]},
+        "87": {"--hcz-artwork-opacity": ["0.87", "bigpicture"]},
+        "88": {"--hcz-artwork-opacity": ["0.88", "bigpicture"]},
+        "89": {"--hcz-artwork-opacity": ["0.89", "bigpicture"]},
+        "90": {"--hcz-artwork-opacity": ["0.9", "bigpicture"]},
+        "91": {"--hcz-artwork-opacity": ["0.91", "bigpicture"]},
+        "92": {"--hcz-artwork-opacity": ["0.92", "bigpicture"]},
+        "93": {"--hcz-artwork-opacity": ["0.93", "bigpicture"]},
+        "94": {"--hcz-artwork-opacity": ["0.94", "bigpicture"]},
+        "95": {"--hcz-artwork-opacity": ["0.95", "bigpicture"]},
+        "96": {"--hcz-artwork-opacity": ["0.96", "bigpicture"]},
+        "97": {"--hcz-artwork-opacity": ["0.97", "bigpicture"]},
+        "98": {"--hcz-artwork-opacity": ["0.98", "bigpicture"]},
+        "99": {"--hcz-artwork-opacity": ["0.99", "bigpicture"]},
+        "100": {"--hcz-artwork-opacity": ["1", "bigpicture"]}
       }
     },
-    "Halo strength (Custom only)": {
+    "Outline thickness (px, Custom only)": {
       "type": "slider",
-      "default": "Off",
+      "default": "2",
       "values": {
-        "Off": {
-          "--hcz-glow-blur": ["0px", "bigpicture"],
-          "--hcz-glow-spread": ["0px", "bigpicture"]
-        },
-        "Low": {
-          "--hcz-glow-blur": ["6px", "bigpicture"],
-          "--hcz-glow-spread": ["1px", "bigpicture"]
-        },
-        "Medium": {
-          "--hcz-glow-blur": ["12px", "bigpicture"],
-          "--hcz-glow-spread": ["2px", "bigpicture"]
-        },
-        "High": {
-          "--hcz-glow-blur": ["20px", "bigpicture"],
-          "--hcz-glow-spread": ["4px", "bigpicture"]
-        }
+        "1": {"--hcz-focus-width": ["1px", "bigpicture"]},
+        "2": {"--hcz-focus-width": ["2px", "bigpicture"]},
+        "3": {"--hcz-focus-width": ["3px", "bigpicture"]},
+        "4": {"--hcz-focus-width": ["4px", "bigpicture"]},
+        "5": {"--hcz-focus-width": ["5px", "bigpicture"]},
+        "6": {"--hcz-focus-width": ["6px", "bigpicture"]},
+        "7": {"--hcz-focus-width": ["7px", "bigpicture"]},
+        "8": {"--hcz-focus-width": ["8px", "bigpicture"]},
+        "9": {"--hcz-focus-width": ["9px", "bigpicture"]},
+        "10": {"--hcz-focus-width": ["10px", "bigpicture"]}
+      }
+    },
+    "Halo size (px, Custom only)": {
+      "type": "slider",
+      "default": "0",
+      "values": {
+        "0": {"--hcz-glow-blur": ["0px", "bigpicture"], "--hcz-glow-spread": ["0px", "bigpicture"]},
+        "1": {"--hcz-glow-blur": ["1px", "bigpicture"], "--hcz-glow-spread": ["0px", "bigpicture"]},
+        "2": {"--hcz-glow-blur": ["2px", "bigpicture"], "--hcz-glow-spread": ["0px", "bigpicture"]},
+        "3": {"--hcz-glow-blur": ["3px", "bigpicture"], "--hcz-glow-spread": ["0px", "bigpicture"]},
+        "4": {"--hcz-glow-blur": ["4px", "bigpicture"], "--hcz-glow-spread": ["0px", "bigpicture"]},
+        "5": {"--hcz-glow-blur": ["5px", "bigpicture"], "--hcz-glow-spread": ["1px", "bigpicture"]},
+        "6": {"--hcz-glow-blur": ["6px", "bigpicture"], "--hcz-glow-spread": ["1px", "bigpicture"]},
+        "7": {"--hcz-glow-blur": ["7px", "bigpicture"], "--hcz-glow-spread": ["1px", "bigpicture"]},
+        "8": {"--hcz-glow-blur": ["8px", "bigpicture"], "--hcz-glow-spread": ["1px", "bigpicture"]},
+        "9": {"--hcz-glow-blur": ["9px", "bigpicture"], "--hcz-glow-spread": ["1px", "bigpicture"]},
+        "10": {"--hcz-glow-blur": ["10px", "bigpicture"], "--hcz-glow-spread": ["2px", "bigpicture"]},
+        "11": {"--hcz-glow-blur": ["11px", "bigpicture"], "--hcz-glow-spread": ["2px", "bigpicture"]},
+        "12": {"--hcz-glow-blur": ["12px", "bigpicture"], "--hcz-glow-spread": ["2px", "bigpicture"]},
+        "13": {"--hcz-glow-blur": ["13px", "bigpicture"], "--hcz-glow-spread": ["2px", "bigpicture"]},
+        "14": {"--hcz-glow-blur": ["14px", "bigpicture"], "--hcz-glow-spread": ["2px", "bigpicture"]},
+        "15": {"--hcz-glow-blur": ["15px", "bigpicture"], "--hcz-glow-spread": ["3px", "bigpicture"]},
+        "16": {"--hcz-glow-blur": ["16px", "bigpicture"], "--hcz-glow-spread": ["3px", "bigpicture"]},
+        "17": {"--hcz-glow-blur": ["17px", "bigpicture"], "--hcz-glow-spread": ["3px", "bigpicture"]},
+        "18": {"--hcz-glow-blur": ["18px", "bigpicture"], "--hcz-glow-spread": ["3px", "bigpicture"]},
+        "19": {"--hcz-glow-blur": ["19px", "bigpicture"], "--hcz-glow-spread": ["3px", "bigpicture"]},
+        "20": {"--hcz-glow-blur": ["20px", "bigpicture"], "--hcz-glow-spread": ["4px", "bigpicture"]},
+        "21": {"--hcz-glow-blur": ["21px", "bigpicture"], "--hcz-glow-spread": ["4px", "bigpicture"]},
+        "22": {"--hcz-glow-blur": ["22px", "bigpicture"], "--hcz-glow-spread": ["4px", "bigpicture"]},
+        "23": {"--hcz-glow-blur": ["23px", "bigpicture"], "--hcz-glow-spread": ["4px", "bigpicture"]},
+        "24": {"--hcz-glow-blur": ["24px", "bigpicture"], "--hcz-glow-spread": ["4px", "bigpicture"]},
+        "25": {"--hcz-glow-blur": ["25px", "bigpicture"], "--hcz-glow-spread": ["5px", "bigpicture"]},
+        "26": {"--hcz-glow-blur": ["26px", "bigpicture"], "--hcz-glow-spread": ["5px", "bigpicture"]},
+        "27": {"--hcz-glow-blur": ["27px", "bigpicture"], "--hcz-glow-spread": ["5px", "bigpicture"]},
+        "28": {"--hcz-glow-blur": ["28px", "bigpicture"], "--hcz-glow-spread": ["5px", "bigpicture"]},
+        "29": {"--hcz-glow-blur": ["29px", "bigpicture"], "--hcz-glow-spread": ["5px", "bigpicture"]},
+        "30": {"--hcz-glow-blur": ["30px", "bigpicture"], "--hcz-glow-spread": ["6px", "bigpicture"]}
       }
     }
   }
