@@ -91,21 +91,6 @@ Outline thickness, Artwork opacity, and Halo size use numeric sliders. Use left/
 - Switching back to **Steam default** removes the custom outline and halo without discarding your custom settings. The artwork toggle and opacity keep their separate settings. CSS Loader saves settings across refreshes.
 - These effects follow pointer hover and controller focus, scale with the cover, and leave the Library shortcut and Library grid unchanged.
 
-### Updating from preset-based controls
-
-Record your selections before updating. The renamed numeric controls do not automatically convert old saved presets. After the update, use these closest available values, then save your CSS Loader profiles again:
-
-| Earlier control | Earlier value | New value |
-| --- | --- | --- |
-| Outline thickness | Thin / Medium / Thick | 1 / 2 / 3 px |
-| Halo strength (previously Glow strength) | Off / Low / Medium / High | Halo size 0 / 5 / 10 / 20 px |
-| Artwork glow | Normal | Use Steam's artwork glow On |
-| Artwork glow | Off / Low / Medium / High | Use Steam's artwork glow Off; Artwork opacity 0 / 30 / 50 / 100% |
-
-The zoom sliders, Focus appearance choices, and Highlight color have not changed. **Existing appearance** was previously renamed **Steam default**; profiles that still use that old option name must also be saved again.
-
-If you used the earlier one-unit numeric sliders, choose the nearest 10% opacity stop and nearest 5 px halo stop; choose the higher stop for halfway values. Save affected profiles again. Outline thickness still uses 1 px steps.
-
 ### Why the glow differs between games
 
 Steam creates the broad artwork glow from a copy of the selected cover. Its current filter multiplies saturation by three and brightness by two, then applies a 3 px blur. Bright colors and large bright areas in the cover therefore produce different glow colors and brightness, even at the same Artwork opacity.
