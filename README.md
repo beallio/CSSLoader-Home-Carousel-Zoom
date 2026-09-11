@@ -8,7 +8,13 @@ The focus ring and attached title move with the cover. The Library grid is not c
 
 ## Screenshots
 
-The screenshots use **Art Hero**, **Centered Game Text**, **Game Header Text Stroke**, **Darken Unfocused Games**, and **Round**, with other installed plugins supplying badges. Those appearance changes are not part of Home Carousel Zoom and are not required or bundled.
+[![Home Carousel Zoom at 115% with a cyan custom halo](assets/preview.png)](assets/preview.png)
+
+Current preview: **115% zoom**, cyan Custom highlight at 80% alpha, **2 px outline**, **15 px halo**, and **0% artwork opacity**. Home Carousel Zoom was the only enabled CSS Loader theme. Cover badges come from other installed plugins and are not included.
+
+### Size comparisons
+
+The size-comparison screenshots below use **Art Hero**, **Centered Game Text**, **Game Header Text Stroke**, **Darken Unfocused Games**, and **Round**, with other installed plugins supplying badges. Those appearance changes are not part of Home Carousel Zoom and are not required or bundled.
 
 Percentages apply to the selected card's existing appearance. **100% keeps Steam's normal focus effect**; it does not remove that effect. These screenshots cover 100% to 130%; the sliders now reach 210%.
 
@@ -26,7 +32,7 @@ Percentages apply to the selected card's existing appearance. **100% keeps Steam
 
 You need [Decky Loader](https://decky.xyz/) and its CSS Loader plugin.
 
-The two sliders, artwork glow, and custom focus controls require **v1.1.0 or later**. If the latest release is older, use the repository installation below.
+The two sliders, artwork glow, and custom focus controls require **v1.1.0 or later**.
 
 ### From a release
 
