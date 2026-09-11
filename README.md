@@ -20,8 +20,6 @@ You need [Decky Loader](https://decky.xyz/) and the **CSS Loader** plugin instal
 5. Return to **Gaming Mode**. Press the **…** (Quick Access) button, open **Decky → CSS Loader**, and select **Refresh**.
 6. Toggle **Home Carousel Zoom** to **On**.
 
-> **Upgrading from older versions:** If you used the earlier single-slider version, your saved zoom setting will not carry over. It defaults to 115%, so simply re-adjust your sliders.
-
 ## Adjusting Cover Size
 
 Press **… → Decky → CSS Loader → Home Carousel Zoom** to adjust your settings.
