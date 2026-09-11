@@ -4,7 +4,7 @@
   .appportrait_LibraryItemBox_WYgDg {
   box-shadow:
     0 0 0 var(--hcz-focus-width, 2px) var(--hcz-focus-color, rgba(255, 255, 255, 0.6)),
-    0 0 var(--hcz-glow-blur, 0px) var(--hcz-glow-spread, 0px)
+    0 0 var(--hcz-glow-blur, 0px) calc(var(--hcz-glow-blur, 0px) / 5)
       color-mix(in srgb, var(--hcz-focus-color, rgba(255, 255, 255, 0.6)) 65%, transparent) !important;
 }
 

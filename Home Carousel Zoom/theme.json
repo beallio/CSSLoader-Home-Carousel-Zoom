@@ -106,13 +106,13 @@
       "type": "slider",
       "default": "0",
       "values": {
-        "0": {"--hcz-glow-blur": ["0px", "bigpicture"], "--hcz-glow-spread": ["0px", "bigpicture"]},
-        "5": {"--hcz-glow-blur": ["5px", "bigpicture"], "--hcz-glow-spread": ["1px", "bigpicture"]},
-        "10": {"--hcz-glow-blur": ["10px", "bigpicture"], "--hcz-glow-spread": ["2px", "bigpicture"]},
-        "15": {"--hcz-glow-blur": ["15px", "bigpicture"], "--hcz-glow-spread": ["3px", "bigpicture"]},
-        "20": {"--hcz-glow-blur": ["20px", "bigpicture"], "--hcz-glow-spread": ["4px", "bigpicture"]},
-        "25": {"--hcz-glow-blur": ["25px", "bigpicture"], "--hcz-glow-spread": ["5px", "bigpicture"]},
-        "30": {"--hcz-glow-blur": ["30px", "bigpicture"], "--hcz-glow-spread": ["6px", "bigpicture"]}
+        "0": {"--hcz-glow-blur": ["0px", "bigpicture"]},
+        "5": {"--hcz-glow-blur": ["5px", "bigpicture"]},
+        "10": {"--hcz-glow-blur": ["10px", "bigpicture"]},
+        "15": {"--hcz-glow-blur": ["15px", "bigpicture"]},
+        "20": {"--hcz-glow-blur": ["20px", "bigpicture"]},
+        "25": {"--hcz-glow-blur": ["25px", "bigpicture"]},
+        "30": {"--hcz-glow-blur": ["30px", "bigpicture"]}
       }
     }
   }
