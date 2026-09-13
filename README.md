@@ -13,12 +13,26 @@ Your Library grid stays untouched, and the "View more in your Library" card keep
 
 You need [Decky Loader](https://decky.xyz/) and the **CSS Loader** plugin installed.
 
+### Standard ZIP
+
 1. Switch your Steam Deck to **Desktop Mode**.
 2. Download the [v1.1.0 ZIP file](https://github.com/beallio/CSSLoader-Home-Carousel-Zoom/releases/download/v1.1.0/Home-Carousel-Zoom-v1.1.0.zip).
 3. Open your file manager, browse to `~/homebrew/themes/`, and create a new folder named `Home Carousel Zoom`.
 4. Extract the ZIP directly into `~/homebrew/themes/Home Carousel Zoom/`. Verify these five files sit directly inside that folder: `theme.json`, `shared.css`, `focus.css`, `artwork.css`, and `LICENSE`.
 5. Return to **Gaming Mode**. Press the **…** (Quick Access) button, open **Decky → CSS Loader**, and select **Refresh**.
 6. Toggle **Home Carousel Zoom** to **On**.
+
+### Local-install ZIP
+
+If you have the separate `Home-Carousel-Zoom-v1.1.0-local-install.zip` package, it can put the files in the right folder for you:
+
+1. Switch to **Desktop Mode** and extract the ZIP.
+2. Open the extracted folder that contains `install.sh`.
+3. Right-click an empty area in that folder and choose **Open Terminal Here**.
+4. Type `bash install.sh` and press Enter. Do not use `sudo`.
+5. Return to **Gaming Mode**, open **Decky → CSS Loader**, select **Refresh**, and turn **Home Carousel Zoom** on.
+
+The installer uses your home folder and keeps your saved settings and other themes. You can delete the extracted package after installation. This package is separate from the standard ZIP linked above.
 
 ## Adjusting Cover Size
 
