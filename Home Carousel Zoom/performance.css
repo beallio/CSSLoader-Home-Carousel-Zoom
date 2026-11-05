@@ -1,0 +1,12 @@
+/* Only loaded when Reduce idle animations is on. These Steam animations run on the main thread. */
+
+/* Steam pulses the focus outline 20 times (about 24 s) after each focus change. Pulse once. */
+.BasicUI .appportrait_LibraryItemBox_WYgDg.Focusable:focus {
+  animation-iteration-count: 1 !important;
+}
+
+/* Steam's 50 s Home background zoom animates transform-origin, so the compositor cannot run it. */
+.gamepadhomerecentgames_RecentGamesBackgroundImages_30D-8
+  .gamepadhomerecentgames_RecentGamesBackground_1SRox {
+  animation: none !important;
+}

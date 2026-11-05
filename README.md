@@ -18,7 +18,7 @@ You need [Decky Loader](https://decky.xyz/) and the **CSS Loader** plugin instal
 1. Switch your Steam Deck to **Desktop Mode**.
 2. Download the [v1.1.0 ZIP file](https://github.com/beallio/CSSLoader-Home-Carousel-Zoom/releases/download/v1.1.0/Home-Carousel-Zoom-v1.1.0.zip).
 3. Open your file manager, browse to `~/homebrew/themes/`, and create a new folder named `Home Carousel Zoom`.
-4. Extract the ZIP directly into `~/homebrew/themes/Home Carousel Zoom/`. Verify these five files sit directly inside that folder: `theme.json`, `shared.css`, `focus.css`, `artwork.css`, and `LICENSE`.
+4. Extract the ZIP directly into `~/homebrew/themes/Home Carousel Zoom/`. Verify these six files sit directly inside that folder: `theme.json`, `shared.css`, `focus.css`, `artwork.css`, `performance.css`, and `LICENSE`.
 5. Return to **Gaming Mode**. Press the **…** (Quick Access) button, open **Decky → CSS Loader**, and select **Refresh**.
 6. Toggle **Home Carousel Zoom** to **On**.
 
@@ -62,6 +62,14 @@ Two separate glow effects exist:
 ### Artwork Glow
 - **Use Steam's artwork glow**: Set to **On** to keep Steam's normal cover lighting. Set to **Off** to unlock:
   - **Artwork opacity (%, override only)**: Adjusts the cover lighting from 0% (completely off) to 100% (Default: 50%).
+
+## Reducing Idle Animations
+
+**Reduce idle animations** (Default: Off) can make Steam's interface a little lighter on the Steam Deck's processor:
+- Steam's white focus outline pulses once instead of about 20 times after you move to a new item. This also applies to the Library grid.
+- The slow zoom of the Home background picture stops. The picture stays at its normal size.
+
+Nothing else changes. Turn the option off to get Steam's normal animations back.
 
 ## Resetting Settings
 

@@ -8,7 +8,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 THEME_NAME = "Home Carousel Zoom"
-THEME_FILES = ("theme.json", "shared.css", "focus.css", "artwork.css", "LICENSE")
+THEME_FILES = ("theme.json", "shared.css", "focus.css", "artwork.css", "performance.css", "LICENSE")
 INSTALL_HELP = """Home Carousel Zoom — local installation
 
 You need Decky Loader and its CSS Loader plugin installed first.
@@ -21,7 +21,7 @@ You need Decky Loader and its CSS Loader plugin installed first.
    and turn Home Carousel Zoom on.
 
 The installer uses your home folder: ~/homebrew/themes/Home Carousel Zoom/
-It replaces only the five theme files. Saved settings and other themes stay
+It replaces only the six theme files. Saved settings and other themes stay
 unchanged. Do not run it with sudo. You can delete this extracted package
 after installation.
 """

@@ -9,7 +9,7 @@ fi
 package_dir=$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 source_dir="$package_dir/Home Carousel Zoom"
 destination="${HOME:?Your HOME environment variable must be set}/homebrew/themes/Home Carousel Zoom"
-files=(theme.json shared.css focus.css artwork.css LICENSE)
+files=(theme.json shared.css focus.css artwork.css performance.css LICENSE)
 
 # Check the complete package before changing the installed theme.
 for file in "${files[@]}"; do
