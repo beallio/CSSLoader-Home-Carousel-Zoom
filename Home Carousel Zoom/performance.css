@@ -1,7 +1,9 @@
 /* Only loaded when Reduce idle animations is on. These Steam animations run on the main thread. */
 
-/* Steam pulses the focus outline 20 times (about 24 s) after each focus change. Pulse once. */
-.BasicUI .appportrait_LibraryItemBox_WYgDg.Focusable:focus {
+/* Steam pulses the focus outline 20 times (about 24 s) after each focus change. Pulse once.
+   Covers game covers and Steam's general focus ring, which themes such as Round also animate. */
+.BasicUI .appportrait_LibraryItemBox_WYgDg.Focusable:focus,
+.focusring_FocusRing_1IZrQ {
   animation-iteration-count: 1 !important;
 }
 
