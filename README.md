@@ -66,7 +66,7 @@ Two separate glow effects exist:
 ## Reducing Idle Animations
 
 **Reduce idle animations** (Default: Off) can make Steam's interface a little lighter on the Steam Deck's processor:
-- Steam's white focus outline pulses once instead of about 20 times after you move to a new item. This applies everywhere in Steam, including the Library grid and menus, and to focus outlines restyled by other themes such as Round.
+- Steam's white focus outline pulses once instead of about 20 times after you move to a new item. This applies on the main Big Picture screens, such as Home, the Library and game pages, and also to focus outlines restyled by other themes such as Round. The Quick Access and Main Menu panels keep their normal pulse.
 - The slow zoom of the Home background picture stops. The picture stays at its normal size.
 
 Nothing else changes. Turn the option off to get Steam's normal animations back.
