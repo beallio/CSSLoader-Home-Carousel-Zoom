@@ -1,7 +1,7 @@
 {
   "name": "Home Carousel Zoom",
   "author": "beallio",
-  "version": "v1.1.0",
+  "version": "v1.2.0",
   "target": "Home",
   "manifest_version": 8,
   "description": "Enlarge Home carousel covers from 100% to 210% with additive zoom sliders. Default: 115%. Artwork glow works in both focus modes. Highlight color, outline thickness, and halo strength work only in Custom mode. The Library grid and View more in your Library card keep their normal size. Optional: Reduce idle animations makes the focus outline pulse once on the main Big Picture screens (not Quick Access or the Main Menu) and stops the slow Home background zoom.",
