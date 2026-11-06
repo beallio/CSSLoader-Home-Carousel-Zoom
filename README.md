@@ -24,9 +24,9 @@ You need [Decky Loader](https://decky.xyz/) and the **CSS Loader** plugin instal
 
 ### Local-install ZIP
 
-If you have the separate `Home-Carousel-Zoom-v1.2.0-local-install.zip` package, it can put the files in the right folder for you:
+The [v1.2.0 local-install ZIP](https://github.com/beallio/CSSLoader-Home-Carousel-Zoom/releases/download/v1.2.0/Home-Carousel-Zoom-v1.2.0-local-install.zip) can put the files in the right folder for you:
 
-1. Switch to **Desktop Mode** and extract the ZIP.
+1. Switch to **Desktop Mode**, download the local-install ZIP, and extract it.
 2. Open the extracted folder that contains `install.sh`.
 3. Right-click an empty area in that folder and choose **Open Terminal Here**.
 4. Type `bash install.sh` and press Enter. Do not use `sudo`.
